@@ -5,7 +5,13 @@ const quantidade = 2
 const estoque = 10
 const valorPago = 9000
 const subtotal = preco * quantidade
-const descontoPercentual = 10
+let descontoPercentual = "nenhum"
+
+if (subtotal >= 1000) {
+    descontoPercentual = 10
+} else {
+    descontoPercentual = 0
+}
 const valorDesconto = subtotal * descontoPercentual / 100
 const valorFinal = subtotal - valorDesconto
 const troco = valorPago - valorFinal
@@ -13,8 +19,6 @@ const troco = valorPago - valorFinal
 let statusPedido = "Aguardando"
 let pagamentoStatus = "aguardo"
 let estoqueDisponivel = "aguardando"
-
-
 
 
 
